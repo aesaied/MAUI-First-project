@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSingleProject.ControlsPage"
+             Title="ControlsPage">
+
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label>
+
+            <Label.Text>
+                Multi
+Line
+            </Label.Text>
+        </Label>
+
+        <Label TextType="Html" Text="This is &lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;HTML&lt;/strong&gt;&lt;/span&gt; text."></Label>
+        <Label LineBreakMode="CharacterWrap" Text="Text wrapping and truncation can be controlled by setting the LineBreakMode property to a value of the LineBreakMode enumeration:Text wrapping and truncation can be controlled by setting the LineBreakMode property to a value of the LineBreakMode enumeration:"></Label>
+
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span TextColor="Red" Text="Click "></Span>
+                    <Span TextColor="Blue" TextDecorations="Underline" Text="Here">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                                
+                            </TapGestureRecognizer>
+                        </Span.GestureRecognizers>
+                        
+                    </Span>
+                    <Span Text="." ></Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Entry Placeholder="Entry"></Entry>
+        <Editor Placeholder="editor" HeightRequest="200"></Editor>
+
+        <Frame BorderColor="Red" HasShadow="True" HorizontalOptions="Start" 
+       CornerRadius="70" HeightRequest="150">
+            <Label Text="Frame wrapped around a Label" />
+        </Frame>
+
+        <IndicatorView x:Name="indicatorView"
+               IndicatorsShape="Square"
+               IndicatorColor="LightGray"
+               SelectedIndicatorColor="DarkGray" />
+
+        <DatePicker MinimumDate="10/04/2024" Format="dd/MM/yyyy"></DatePicker>
+
+        <Picker x:Name="picker"
+        Title="Select a monkey">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+            <TimePicker></TimePicker>
+
+            <WebView Source="https://learn.microsoft.com/dotnet/maui" />
+
+            
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

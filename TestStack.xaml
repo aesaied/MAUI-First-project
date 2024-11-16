@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSingleProject.TestStack"
+             Title="TestStack">
+
+    <ScrollView>
+
+    <Grid  >
+
+        <VerticalStackLayout VerticalOptions="Center">
+
+            <!--<Frame BackgroundColor="Red">
+        
+    </Frame>
+
+    <Frame HorizontalOptions="StartAndExpand" BackgroundColor="Green">
+        <Label Text="Hello"></Label>
+
+    </Frame>
+
+    <Frame BackgroundColor="Red" HorizontalOptions="Fill" HeightRequest="200">
+
+        <StackLayout Orientation="Horizontal">
+            <Label VerticalOptions="Center" Text="Controll 1jhhhhhhhhhhhhhhhh"></Label>
+            <Label VerticalOptions="End" Text="Controll 2kjjjjjjjjjjjj"></Label>
+
+            <Label VerticalOptions="Fill"  Text="Controll 3kjjjjjjjjjjjjjjjjjjj"></Label>
+        </StackLayout>
+
+    </Frame>
+    <Frame BackgroundColor="Gray">
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*">
+        <Label  Grid.Column="0" HorizontalTextAlignment="Center" VerticalOptions="Start" Text="First Controll"></Label>
+         <Label Grid.Column="1"  HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" Text="Second Controll"></Label>
+
+        </Grid>
+
+
+    </Frame>-->
+            <Frame BackgroundColor="LightGray" Margin="30,5" >
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Image Margin="{OnIdiom 10 , Phone=5}" BackgroundColor="{OnIdiom Transparent,Desktop=Black}" Source="dotnet_bot.png" Aspect="AspectFit"    WidthRequest="400">
+
+                          
+                    </Image>
+
+                     <Label  VerticalOptions="Center" Text="{OnPlatform Enter Username,  WinUI=UserName}"></Label>
+                    <Entry VerticalOptions="Center" Placeholder="Enter username"></Entry>
+
+
+                    <Label  VerticalOptions="Center" Text="Enter password"></Label>
+                    <Entry VerticalOptions="Center" Placeholder="Enter password" IsPassword="True"></Entry>
+
+
+                    <Button Text="login" HorizontalOptions="Center" WidthRequest="200"></Button>
+
+                </VerticalStackLayout>
+
+            </Frame>
+        </VerticalStackLayout>
+    </Grid>
+
+    </ScrollView>
+
+</ContentPage>

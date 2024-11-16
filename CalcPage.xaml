@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSingleProject.CalcPage"
+             Title="Calculator UI">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="CustomButtonStyle">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource PrimaryDarkText}}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource myOrange}}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="14,10"/>
+                <Setter Property="MinimumHeightRequest" Value="44"/>
+                <Setter Property="MinimumWidthRequest" Value="44"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray600}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="PointerOver" />
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+    <Grid ColumnSpacing="15" RowSpacing="15" BackgroundColor="Gray" ColumnDefinitions="2*,1*,1*,1*" RowDefinitions="2*, *,*,*,*,*, Auto">
+
+
+
+        <Frame Margin="17" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <Label   Text="Result" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  HorizontalOptions="Fill"></Label>
+
+        </Frame>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="7"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Text="8"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Text="9"></Button>
+        <Button Grid.Row="1" Grid.Column="3" Text="/"  Style="{StaticResource CustomButtonStyle}">
+            <Button.Resources>
+                <ResourceDictionary>
+                        <Color x:Key="myOrange">Red</Color>
+                </ResourceDictionary>
+            </Button.Resources>
+            
+        </Button>
+
+
+        <Button Grid.Row="2" Grid.Column="0" Text="4"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Text="5"></Button>
+        <Button Grid.Row="2" Grid.Column="2" Text="6"></Button>
+        <Button Grid.Row="2" Grid.Column="3" Text="X" Style="{StaticResource CustomButtonStyle}"></Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Text="1"></Button>
+        <Button Grid.Row="3" Grid.Column="1" Text="2"></Button>
+        <Button Grid.Row="3" Grid.Column="2" Text="3"></Button>
+        <Button Grid.Row="3" Grid.Column="3" Text="-"    Style="{StaticResource CustomButtonStyle}"></Button>
+
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="0"></Button>
+        <Button Grid.Row="4"  Grid.Column="3" BackgroundColor="Orange" Text="+"  Style="{StaticResource CustomButtonStyle}"></Button>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="{StaticResource Gray300}"  Text="C"></Button>
+        <Button Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="3" Text="="  Style="{StaticResource CustomButtonStyle}"></Button>
+
+
+
+
+
+
+    </Grid>
+
+    </ScrollView>
+</ContentPage>

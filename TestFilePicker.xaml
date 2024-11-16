@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSingleProject.TestFilePicker"
+             Title="TestFilePicker">
+    <VerticalStackLayout>
+
+        <Image x:Name="img1" ></Image>
+
+        <Button Text="Pick image" x:Name="btnX" Clicked="btnX_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
